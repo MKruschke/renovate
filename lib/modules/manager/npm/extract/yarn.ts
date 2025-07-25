@@ -9,10 +9,10 @@ import {
   readLocalFile,
 } from '../../../../util/fs';
 import type { PackageFileContent } from '../../types';
+import type { YarnCatalogsSchema } from '../schema';
 import type { NpmManagerData } from '../types';
 import { extractCatalogDeps } from './common/catalogs';
 import type { Catalog, LockFile } from './types';
-import type { YarnCatalogsSchema } from './yarnrc';
 
 export async function getYarnLock(filePath: string): Promise<LockFile> {
   // TODO #22198
